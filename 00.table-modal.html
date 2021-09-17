@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <!-- JavaScript Bundle with Popper -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* .table{
+            display: none;
+        } */
+        body {
+            background-color: rgb(55, 99, 126);
+            width: 70%;
+            margin: auto;
+            margin-top: 5rem;
+        }
+
+        .modalas {
+
+            position: fixed;
+            z-index: -999999;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity ease-in 0.3s;
+
+        }
+.modalas_aktyvus{
+    z-index: 11;
+    opacity: 1;
+    transition: opacity ease-in 0.7s;
+}
+        .modalas .content {
+            background-color: rgb(26, 64, 88);
+            width: 30%;
+            height: auto;
+            margin: auto;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .modalas .header {
+            display: flex;
+            flex-direction: column;
+            
+        }
+.header input{
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .modalas .title {
+            padding: 1rem 0rem;
+            color: burlywood;
+            font-size: larger;
+        }
+
+        .trinti {
+            margin: 0.5rem;
+            background-color: brown;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .brown {
+            background-color: brown;
+        }
+
+        .btn-warning {
+            background-color: rgb(156, 40, 25) !important;
+            color: rgb(255, 255, 255);
+            border: none !important;
+            padding: 10px 20px !important;
+        }
+    </style>
+
+    <form id="forma" class="forma input-group mb-5">
+
+        <input id="vardas" type="text" aria-label="First name" placeholder="vardas" class="form-control" value="">
+        <input id="pavarde" type="text" aria-label="Last name" class="form-control" placeholder="pavarde">
+        <button class="btn btn-primary test" type="submit">Add</button>
+    </form>
+
+    <table id="table" class="table table-striped">
+        <tbody id="tbody">
+            <tr>
+                <th>Vardas</th>
+                <th>Pavarde</th>
+                <th>Veiksmai</th>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+
+    <div id="modalas-trinti" class="modalas">
+        <div class="content">
+            <div class="title">Ar tikrai norite trinti?</div>
+            <div class="footer">
+                <button id="modalas-close" type="button" class="btn btn-secondary modalas-close">Close</button>
+                <button type="button" class="btn btn-danger modalas-trinti">Trinti</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="modalas-edit" class="modalas modalas_edit">
+        <div class="content">
+            <div class="title">Iveskite naujus duomenys:</div>
+            <div class="header">
+                <input id="edit_vardas" type="text" placeholder="vardas">
+                <input id="edit_pavarde" type="text" placeholder="pavarde">
+            </div>
+            <div class="footer">
+                <button id="modalas-close" type="button" class="btn btn-secondary modalas-close">Close</button>
+                <button type="button" class="btn btn-success edit-modalas-save">Issaugoti</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="00.table-modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- <script src="node_modules\jquery\dist\jquery.min.js"></script> -->
+     <!-- <script>
+        $( ".fadein" ).click(function() {
+
+          $( "table" ).fadeIn( 3000);
+        
+        });
+        </script> -->
+
+
+     
+
+</body>
+
+</html>
